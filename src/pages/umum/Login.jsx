@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../../api/axiosConfig";
 import "../../styles/umum/Login.css";
 import logoSipera from "../../assets/logo-sipera.jpeg";
 import Footer from "./Footer";
@@ -37,12 +37,8 @@ setError("");
 setLoading(true);
 
 try {
-  const response = await axios.post(
-    "http://localhost:5000/api/auth/login",
-    {
-      email: formData.email.trim(),
-      password: formData.password,
-    }
+const response = await api.post(
+  "/api/auth/login",
   );
 
   const { token, user } = response.data;

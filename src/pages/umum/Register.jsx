@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+import api from "../../api/axiosConfig";
 import "../../styles/umum/Register.css";
 import logoSipera from "../../assets/logo-sipera.jpeg";
 import Footer from "./Footer";
@@ -52,16 +52,8 @@ function Register() {
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
-        {
-          nama: formData.nama,
-          email: formData.email,
-          password: formData.password,
-          role: role,
-          noTelepon: formData.noTelepon,
-          alamat: formData.alamat,
-        }
+      const response = await api.post(
+        "/api/auth/register",
       );
 
       setSuccess(

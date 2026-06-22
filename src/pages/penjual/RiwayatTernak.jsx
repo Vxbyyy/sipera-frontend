@@ -39,7 +39,7 @@ function RiwayatTernak() {
       return foto;
     }
 
-    return `http://localhost:5000/uploads/${foto}`;
+   return `${import.meta.env.VITE_API_URL}/uploads/${foto}`;
   };
 
   const getStatusTernak = (stok) => {
