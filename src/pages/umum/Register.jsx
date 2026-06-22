@@ -52,9 +52,17 @@ function Register() {
     }
 
     try {
-      const response = await api.post(
-        "/api/auth/register",
-      );
+const response = await api.post(
+  "/api/auth/register",
+  {
+    nama: formData.nama,
+    email: formData.email,
+    password: formData.password,
+    role: role,
+    noTelepon: formData.noTelepon,
+    alamat: formData.alamat,
+  }
+);
 
       setSuccess(
         response.data.message ||

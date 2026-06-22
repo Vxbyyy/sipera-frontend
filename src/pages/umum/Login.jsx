@@ -39,7 +39,11 @@ setLoading(true);
 try {
 const response = await api.post(
   "/api/auth/login",
-  );
+  {
+    email: formData.email.trim(),
+    password: formData.password,
+  }
+);
 
   const { token, user } = response.data;
 
