@@ -1,0 +1,274 @@
+.edit-ternak-page {
+  min-height: 100vh;
+  background: #fafafa;
+  color: #2e2e2e;
+}
+
+.edit-ternak-logo h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #171312;
+}
+
+.edit-ternak-logo span {
+  color: #7f461b;
+}
+
+.edit-ternak-nav-links a {
+  text-decoration: none;
+  color: #3d332d;
+  font-size: 18px;
+  font-weight: 700;
+
+  padding: 14px 26px;
+
+  border-radius: 999px;
+
+  transition: all .25s ease;
+}
+
+.edit-ternak-nav-links a:hover {
+  background: #f3ece7;
+  color: #7f461b;
+}
+
+.edit-ternak-nav-links a.active {
+  background: #7f461b;
+  color: white;
+
+  box-shadow:
+    0 8px 20px rgba(127,70,27,.25);
+}
+
+.edit-ternak-user div {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.edit-ternak-user strong {
+  font-size: 16px;
+  color: #171312;
+}
+
+.edit-ternak-user span {
+  color: #7f6d61;
+  font-size: 14px;
+}
+
+.edit-ternak-user button {
+  border: none;
+  background: transparent;
+  color: #7f461b;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MAIN */
+.edit-ternak-main {
+  padding: 24px;
+}
+
+.edit-ternak-card {
+  background: white;
+  border: 1px solid #ece7e2;
+  border-radius: 20px;
+  padding: 34px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.edit-photo-section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  align-items: center;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #eee8e3;
+}
+
+.photo-preview-box {
+  width: 220px;
+  height: 160px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e8e0db;
+  background: #f3ece7;
+}
+
+.photo-preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-empty {
+  width: 100%;
+  height: 100%;
+  color: #7f461b;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-label {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  color: #171312;
+  margin-bottom: 8px;
+}
+
+.photo-helper {
+  color: #7f6d61;
+  margin-bottom: 16px;
+}
+
+.edit-photo-section input[type="file"] {
+  border: 1px solid #e4ded8;
+  padding: 14px;
+  border-radius: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.edit-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.edit-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-input-group.full {
+  grid-column: span 2;
+}
+
+.edit-input-group label {
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.edit-input-group input,
+.edit-input-group select,
+.edit-input-group textarea {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 15px 16px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+}
+
+.edit-input-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.edit-input-group input:focus,
+.edit-input-group select:focus,
+.edit-input-group textarea:focus {
+  border-color: #7f461b;
+  box-shadow: 0 0 0 3px rgba(127, 70, 27, 0.12);
+}
+
+.edit-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.cancel-btn,
+.save-btn {
+  border: none;
+  border-radius: 14px;
+  padding: 16px 28px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.cancel-btn {
+  background: #f3ece7;
+  color: #7f461b;
+}
+
+.cancel-btn:hover {
+  background: #e4d2c5;
+}
+
+.save-btn {
+  background: #7f461b;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #5c3213;
+}
+
+.save-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.edit-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f461b;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+  .edit-ternak-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .edit-ternak-user {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .edit-ternak-main {
+    padding: 35px 20px;
+  }
+
+  .edit-photo-section {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-preview-box {
+    width: 100%;
+    height: 220px;
+  }
+
+  .edit-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-input-group.full {
+    grid-column: span 1;
+  }
+
+  .edit-form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    width: 100%;
+  }
+}

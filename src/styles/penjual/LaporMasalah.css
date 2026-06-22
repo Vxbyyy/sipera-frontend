@@ -1,0 +1,380 @@
+/* ================= PAGE ================= */
+
+.lapor-page{
+  min-height:100vh;
+  background:#fafafa;
+  padding:10px 30px 0;
+  box-sizing:border-box;
+}
+
+.lapor-main {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* ================= CONTENT ================= */
+
+
+
+/* CARD BESAR */
+
+
+.lapor-card {
+  width: 100%;
+
+  background: white;
+  border: 1px solid #ebe5df;
+  border-radius: 28px;
+
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* FORM */
+
+
+.form-group {
+
+ margin-bottom:28px;
+
+}
+
+
+.form-group label {
+
+ display:block;
+
+ margin-bottom:12px;
+
+ font-size:18px;
+
+ font-weight:700;
+
+}
+
+
+.form-group select,
+.form-group textarea {
+
+ width:100%;
+
+ box-sizing:border-box;
+
+
+ padding:16px;
+
+
+ border:1px solid #ddd;
+
+ border-radius:12px;
+
+
+ font-size:16px;
+
+}
+
+
+.form-group textarea {
+
+ min-height:170px;
+
+}
+
+
+
+/* BUTTON */
+
+
+.lapor-actions {
+  margin-top: 30px;
+}
+
+.btn-kirim {
+  width: 100%;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #8b4e1c;
+  color: white;
+
+  border: none;
+  border-radius: 16px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* RIWAYAT */
+
+
+.riwayat-laporan {
+
+ margin-top:45px;
+
+}
+
+
+.riwayat-laporan h2 {
+
+ color:#8b4e1c;
+
+ font-size:28px;
+
+ margin-bottom:25px;
+
+}
+
+
+.kosong-laporan {
+
+ text-align:center;
+
+ color:#777;
+
+ padding:30px;
+
+}
+
+
+
+/* ITEM */
+
+.laporan-item{
+  display:block !important;
+  grid-template-columns: 1.2fr 1fr 1fr 1.3fr;
+  gap:24px;
+
+  background:white;
+  border:1px solid #ebe5df;
+  border-left:6px solid #8b4e1c;
+  border-radius:18px;
+  padding:24px;
+}
+
+.laporan-section,
+.laporan-extra{
+  display:block !important;
+  width:100%;
+  margin-bottom:24px;
+}
+
+.laporan-item-header{
+  display:flex;
+  gap:12px;
+  margin-bottom:24px;
+}
+
+.info-box {
+  min-height: 120px;
+
+  background: #f8f9fb;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+
+  padding: 16px;
+}
+
+
+.user-reply-section {
+  margin-top: 0;
+}
+
+.user-reply-section textarea {
+  width: 100%;
+
+  min-height: 150px;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  padding: 15px;
+
+  resize: vertical;
+}
+
+.btn-reply-user {
+  margin-top: 15px;
+
+   width:100%;
+  height:56px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #8b4e1c;
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.user-reply-box {
+  min-height: 120px;
+
+  background: #f8f9fb;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+
+  padding: 16px;
+}
+
+
+.kategori-badge {
+
+
+ background:#f3ece7;
+
+ color:#8b4e1c;
+
+
+ padding:8px 18px;
+
+ border-radius:20px;
+
+
+ font-weight:700;
+
+}
+
+
+.status-badge {
+
+ padding:8px 18px;
+
+ border-radius:20px;
+
+ font-weight:700;
+
+}
+
+
+.status-badge.menunggu {
+
+ background:#fff2cc;
+
+ color:#b77900;
+
+}
+
+
+.status-badge.selesai {
+
+ background:#d9f5df;
+
+ color:#087d2e;
+
+}
+
+.page-label {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  background: #f3ece7;
+  color: #8b4e1c;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.lapor-header-card h1 {
+  font-size: 56px;
+  font-weight: 800;
+
+  color: #171312;
+
+  margin-bottom: 12px;
+}
+
+.lapor-header-card p {
+  font-size: 18px;
+  color: #7f6d61;
+}
+
+/* ===== RIWAYAT LAPORAN ===== */
+
+.riwayat-laporan {
+  margin-top: 50px;
+}
+
+.riwayat-laporan h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #8b4e1c;
+  margin-bottom: 25px;
+}
+
+.laporan-section{
+  margin: bottom 24px;;
+}
+
+.laporan-section h4 {
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #8b4e1c;
+}
+
+.laporan-extra{
+  border-top:1px solid #ececec;
+  padding-top:24px;
+  margin-top:10px;
+}
+
+.user-reply-section{
+  margin-top:0;
+}
+
+.user-reply-section h4 {
+  margin-bottom: 10px;
+
+  color: #8b4e1c;
+}
+
+.user-reply-section textarea {
+  width: 100%;
+  min-height: 120px;
+
+  padding: 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 14px;
+
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.user-reply-box h4 {
+  margin-bottom: 10px;
+
+  color: #8b4e1c;
+}
+
+
+@media (max-width: 1200px) {
+
+  .laporan-item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .laporan-item {
+    grid-template-columns: 1fr;
+  }
+
+}

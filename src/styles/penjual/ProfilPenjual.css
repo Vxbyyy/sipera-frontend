@@ -1,0 +1,367 @@
+.seller-profile-page {
+  min-height: 100vh;
+  color: #2e2e2e;
+}
+
+/* MAIN */
+.seller-profile-main {
+   padding: 24px;
+}
+
+.page-label{
+  display:inline-block;
+
+  padding:8px 18px;
+
+  background:#f3ece7;
+  color:#8b4e1c;
+
+  border-radius:999px;
+
+  font-size:13px;
+  font-weight:700;
+
+  margin-bottom:14px;
+}
+
+.lapor-header-card h1{
+  margin:0;
+
+  font-size:32px;
+  font-weight:800;
+
+  color:#2e2e2e;
+
+  margin-bottom:10px;
+}
+
+.lapor-header-card p{
+  margin-top:8px;
+
+  font-size:16px;
+  color:#7f6d61;
+
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+
+.profile-card,
+.profile-form-card {
+  background: white;
+  border: 1px solid #ece7e2;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.profile-avatar{
+  width:90px;
+  height:90px;
+
+  border-radius:50%;
+  background:#8b4e1c;
+  color:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:36px;
+  font-weight:800;
+}
+
+.profile-role {
+  background: #f3ece7;
+  color: #7f461b;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.profile-form-card {
+  padding: 34px;
+}
+
+.profile-card-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.profile-card-title i {
+  color: #7f461b;
+  font-size: 24px;
+}
+
+.profile-card-title h2 {
+  margin: 0;
+  color: #171312;
+  font-size: 28px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.profile-group.full {
+  grid-column: 1 / -1;
+}
+
+.profile-group {
+  margin-bottom: 22px;
+}
+
+.profile-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: #333;
+}
+
+.profile-group input,
+.profile-group textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.profile-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.profile-group input:focus,
+.profile-group textarea:focus {
+  border-color: #7f461b;
+  box-shadow: 0 0 0 3px rgba(127, 70, 27, 0.12);
+}
+
+.profile-save-btn {
+  border: none;
+  background: #7f461b;
+  color: white;
+  padding: 15px 26px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.profile-save-btn:hover {
+  background: #5c3213;
+}
+
+@media (max-width: 900px) {
+
+  .seller-profile-main {
+    padding: 35px 20px;
+  }
+
+
+  .seller-profile-header h1 {
+    font-size: 34px;
+  }
+
+  .rekening-title {
+  margin-top: 34px;
+  border-top: 1px solid #eee8e3;
+  padding-top: 26px;
+}
+
+.profile-group.full {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .profile-group.full {
+    grid-column: span 1;
+  }
+}
+
+
+.profile-cancel-btn{
+  margin-left:12px;
+  background:#999;
+  color:white;
+  border:none;
+  padding:15px 26px;
+  border-radius:12px;
+}
+
+.seller-info-item strong{
+  display:block;
+  margin-bottom:8px;
+  color:#7f461b;
+}
+
+.profile-cancel-btn{
+  margin-left:12px;
+  background:#999;
+  color:white;
+  border:none;
+  padding:15px 24px;
+  border-radius:12px;
+  cursor:pointer;
+}
+}
+
+
+.full-width {
+  width: 100%;
+}
+
+.profile-form-card{
+  width:100%;
+
+  background:white;
+  border:1px solid #ebe5df;
+  border-radius:28px;
+
+  padding:50px;
+
+  box-sizing:border-box;
+}
+
+.profile-header-user{
+  display:flex;
+  align-items:center;
+  gap:24px;
+
+  padding-bottom:30px;
+  margin-bottom:35px;
+
+  border-bottom:1px solid #ebe5df;
+}
+
+.profile-user-info h2{
+  margin:0 0 8px;
+  font-size:30px;
+  color:#171312;
+}
+
+.profile-user-info p{
+  margin:0 0 12px;
+  color:#777;
+}
+
+.profile-avatar{
+  width:90px;
+  height:90px;
+
+  border-radius:50%;
+
+  background:#8b4e1c;
+  color:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:36px;
+  font-weight:800;
+}
+
+.profile-header-user h2{
+  margin:0 0 8px;
+  font-size:30px;
+}
+
+.profile-header-user p{
+  margin:0 0 10px;
+  color:#777;
+}
+
+.profile-role{
+  display:inline-block;
+
+  padding:8px 18px;
+
+  background:#f3ece7;
+  color:#8b4e1c;
+
+  border-radius:999px;
+  font-weight:700;
+}
+
+.profile-title-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.profile-edit-btn{
+  border:none;
+  background:#8b4e1c;
+  color:white;
+
+  padding:12px 24px;
+  border-radius:12px;
+
+  font-weight:700;
+  cursor:pointer;
+}
+
+.profile-edit-btn:hover{
+  background:#6f3d16;
+}
+
+.profile-action-buttons{
+  display:flex;
+  gap:12px;
+  margin-top:25px;
+}
+
+.profile-save-btn{
+  background:#8b4e1c;
+  color:white;
+}
+
+.profile-cancel-btn{
+  border:none;
+  background:#b8b8b8;
+  color:white;
+
+  padding:15px 24px;
+  border-radius:12px;
+
+  cursor:pointer;
+}
+
+.profile-form input:disabled,
+.profile-form textarea:disabled{
+  background:#f8f8f8;
+  color:#555;
+  cursor:not-allowed;
+}
+
+@media (max-width:900px){
+
+
+  .seller-profile-main{
+    padding:20px;
+  }
+
+  .profile-grid{
+    grid-template-columns:1fr;
+  }
+
+  .profile-group.full{
+    grid-column:auto;
+  }
+
+  .profile-title-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+}

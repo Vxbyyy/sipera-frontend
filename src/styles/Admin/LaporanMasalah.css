@@ -1,0 +1,520 @@
+/* ===========================
+   LAYOUT CHAT
+=========================== */
+
+.laporan-chat-layout{
+  display:grid;
+  grid-template-columns:450px 1fr;
+  gap:24px;
+  margin-top:30px;
+}
+
+/* ===========================
+   SIDEBAR KIRI
+=========================== */
+
+.laporan-sidebar{
+  background:#fff;
+  border-radius:24px;
+  border:1px solid #ece7e2;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+.sidebar-header{
+  padding:20px;
+  border-bottom:1px solid #ece7e2;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.sidebar-search{
+  padding:16px;
+  border-bottom:1px solid #ece7e2;
+}
+.sidebar-search{
+  padding:16px;
+  border-bottom:1px solid #ece7e2;
+}
+
+.sidebar-search input{
+  width:100%;
+  height:48px;
+  border:1px solid #ece7e2;
+  border-radius:12px;
+  padding:0 16px;
+  outline:none;
+}
+
+.sidebar-search input:focus{
+  border-color:#7f461b;
+}
+
+.empty-sidebar{
+  padding:40px;
+  text-align:center;
+  color:#888;
+}
+.sidebar-search input{
+  width:100%;
+  height:42px;
+
+  border:1px solid #ddd;
+  border-radius:12px;
+
+  padding:0 14px;
+
+  outline:none;
+}
+
+.sidebar-header h3{
+  margin:0;
+  color:#171312;
+}
+
+.laporan-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  min-height:95px;
+  padding:16px 18px;
+
+  border-bottom:1px solid #f1f1f1;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+.user-info{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.kategori-tag{
+  display:inline-block;
+  margin-top:6px;
+
+  padding:4px 10px;
+
+  border-radius:999px;
+
+  background:#f3ece7;
+  color:#7f461b;
+
+  font-size:12px;
+  font-weight:700;
+}
+
+.laporan-item:hover{
+  background:#faf7f4;
+}
+
+.laporan-item.active{
+  background:#faf7f4;
+  border-left:4px solid #7f461b;
+}
+
+.laporan-item-info{
+  flex:1;
+  min-width:0;
+}
+
+.laporan-item-info h4{
+  margin:0;
+  font-size:18px;
+  font-weight:700;
+
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.laporan-item-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:4px;
+}
+
+.laporan-item-info p{
+  margin-top:6px;
+  width:100%;
+  color:#888;
+
+  font-size:13px;
+
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+
+.sidebar-status{
+  padding:4px 8px;
+
+  border-radius:999px;
+
+  font-size:10px;
+  font-weight:700;
+
+  white-space:nowrap;
+
+  flex-shrink:0;
+
+   border:none;
+  cursor:pointer;
+}
+
+.sidebar-status.selesai{
+  background:#d9f5df;
+  color:#0a7d2f;
+}
+
+.sidebar-status.menunggu{
+  background:#fff2cc;
+  color:#b77900;
+}
+
+/* ===========================
+   DETAIL KANAN
+=========================== */
+
+.laporan-detail{
+  background:#fff;
+  border-radius:24px;
+  border:1px solid #ece7e2;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+   min-height:600px;
+}
+
+.detail-header{
+  padding:20px 24px;
+  border-bottom:1px solid #ece7e2;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.detail-header h2{
+  margin:0;
+  font-size:24px;
+  color:#171312;
+}
+
+/* ===========================
+   CHAT AREA
+=========================== */
+.chat-area{
+  flex:1;
+  padding:30px;
+
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+
+  background:#fafafa;
+}
+
+
+/* ===========================
+   FOOTER CHAT
+=========================== */
+
+.reply-area{
+  padding:20px 24px;
+  border-top:1px solid #ece7e2;
+
+  display:flex;
+  gap:16px;
+  align-items:center;
+
+  background:#fff;
+}
+
+.reply-area textarea{
+  flex:1;
+
+  min-height:70px;
+  max-height:120px;
+
+  resize:none;
+
+  border:1px solid #ddd;
+  border-radius:12px;
+
+  padding:14px 16px;
+
+  font-size:14px;
+  font-family:inherit;
+
+  outline:none;
+}
+
+.reply-area textarea:focus{
+  border-color:#7f461b;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+  .laporan-chat-layout{
+    grid-template-columns:1fr;
+  }
+
+ .laporan-sidebar{
+  max-height:700px;
+  overflow-y:auto;
+}
+
+  .chat-bubble{
+    max-width:90%;
+  }
+
+}
+
+.laporan-admin-page{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  padding:0;
+}
+
+.laporan-container{
+  width:100%;
+  max-width:1600px;
+  margin:0 auto;
+  padding:40px;
+}
+
+.laporan-header{
+  background:white;
+  border:1px solid #ece7e2;
+  border-radius:28px;
+  padding:40px;
+  margin-bottom:30px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+.laporan-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-bottom:30px;
+}
+
+.stat-card{
+  background:white;
+  border-radius:24px;
+  padding:28px;
+  border:1px solid #ece7e2;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+.stat-card h3{
+  margin:0;
+  font-size:42px;
+  color:#171312;
+}
+
+.stat-card p{
+  margin-top:8px;
+  color:#7f6d61;
+}
+
+.stat-card.warning{
+  border-left:5px solid #f2b600;
+}
+
+.stat-card.success{
+  border-left:5px solid #1aa251;
+}
+
+.status-badge{
+padding:8px 16px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+display:inline-block;
+border:none;
+cursor:pointer;
+}
+
+.status-badge.selesai{
+background:#d9f5df;
+color:#0a7d2f;
+}
+
+.status-badge.menunggu{
+background:#fff2cc;
+color:#b77900;
+}
+
+.btn-balas{
+border:none;
+
+background:linear-gradient(
+135deg,
+#7f461b,
+#9a5a28
+);
+
+color:white;
+
+padding:12px 20px;
+min-width:180px;
+height:52px;
+border-radius:12px;
+
+font-weight:700;
+cursor:pointer;
+
+transition:.25s;
+}
+
+.btn-balas:hover{
+transform:translateY(-2px);
+
+box-shadow:
+0 10px 20px rgba(127,70,27,.25);
+}
+
+.btn-kembali{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+margin-top:25px;
+
+text-decoration:none;
+
+background:white;
+color:#7f461b;
+
+border:1px solid #7f461b;
+
+padding:14px 22px;
+
+border-radius:14px;
+
+font-weight:700;
+
+transition:.25s;
+}
+
+.btn-kembali:hover{
+background:#7f461b;
+color:white;
+
+transform:translateY(-2px);
+}
+
+/* ==========================
+   USER AVATAR
+========================== */
+
+.user-avatar{
+   width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  background:#f3ece7;
+  color:#7f461b;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-weight:800;
+   font-size:16px;
+
+  flex-shrink:0;
+}
+
+/* ==========================
+   CHAT BUBBLE
+========================== */
+
+.chat-bubble{
+  width:fit-content;
+  max-width:70%;
+  min-width:350px;
+
+  padding:20px 24px;
+
+  border-radius:18px;
+
+  box-shadow:
+  0 4px 12px rgba(0,0,0,.05);
+}
+
+.chat-bubble.user{
+  align-self:flex-start;
+
+  background:#fff;
+  border:1px solid #ece7e2;
+
+  border-bottom-left-radius:6px;
+}
+
+.chat-bubble.admin{
+  align-self:flex-end;
+
+  background:linear-gradient(
+    135deg,
+    #7f461b,
+    #9a5a28
+  );
+
+  color:white;
+
+  border-bottom-right-radius:6px;
+}
+
+.chat-label{
+  display:block;
+  margin-bottom:8px;
+
+  font-size:12px;
+  font-weight:700;
+}
+
+.chat-bubble.user .chat-label{
+  color:#7f461b;
+}
+
+.chat-bubble.admin .chat-label{
+  color:#f5dfcb;
+}
+
+.chat-bubble p{
+  margin:0;
+  line-height:1.7;
+}
+
+/* ==========================
+   EMPTY CHAT
+========================== */
+
+.empty-chat{
+  flex:1;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#888;
+  font-size:18px;
+  font-weight:600;
+}

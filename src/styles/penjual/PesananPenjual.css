@@ -1,0 +1,525 @@
+.seller-order-page{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* MAIN */
+.seller-order-main {
+  padding: 60px 48px;
+  flex:1;
+}
+
+
+.seller-order-stats{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(240px,1fr));
+
+  gap:24px;
+  margin-bottom:30px;
+}
+
+.order-stat-card{
+  background:white;
+
+  border:1px solid #ece7e2;
+
+  border-radius:18px;
+
+  padding:24px;
+
+  text-align:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+}
+
+.order-stat-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.order-stat-icon.pending {
+  background: #fff4df;
+  color: #b45309;
+}
+
+.order-stat-icon.process {
+  background: #eef5ff;
+  color: #2563eb;
+}
+
+.order-stat-icon.done {
+  background: #eafff1;
+  color: #0a8f3c;
+}
+.order-stat-icon.total{
+  background:#f3ece7;
+  color:#7f461b;
+}
+
+.order-stat-card p {
+  margin: 0 0 6px;
+  color: #7f6d61;
+  font-weight: 700;
+}
+
+.order-stat-card h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #171312;
+}
+
+.seller-order-card{
+  background:white;
+  border:1px solid #ece7e2;
+  border-radius:28px;
+  padding:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.seller-order-card-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.seller-order-card-title i {
+  color: #7f461b;
+  font-size: 24px;
+}
+
+.seller-order-card-title h2 {
+  margin: 0;
+  color: #171312;
+  font-size: 28px;
+}
+
+.seller-order-table-wrapper {
+  overflow-x: auto;
+}
+
+.seller-order-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+
+.seller-order-table th,
+.seller-order-table td{
+  padding:28px 16px;
+  border-top:1px solid #f0ebe6;
+  vertical-align:middle;
+  font-size:16px;
+}
+
+.seller-order-table th{
+  background:#faf8f6;
+  font-weight:800;
+  color:#171312;
+  letter-spacing:.5px;
+}
+
+.seller-order-table tbody tr{
+  transition:.25s;
+}
+
+.seller-order-table tbody tr:hover{
+  background:#fcfaf8;
+}
+
+/* KOLOM KIRI */
+.seller-order-table th:nth-child(1),
+.seller-order-table td:nth-child(1),
+
+.seller-order-table th:nth-child(2),
+.seller-order-table td:nth-child(2),
+
+.seller-order-table th:nth-child(3),
+.seller-order-table td:nth-child(3),
+
+.seller-order-table th:nth-child(4),
+.seller-order-table td:nth-child(4),
+
+
+.seller-order-table th:nth-child(7),
+.seller-order-table td:nth-child(7){
+  text-align:left;
+}
+
+/* KOLOM TENGAH */
+.seller-order-table th:nth-child(5),
+.seller-order-table td:nth-child(5),
+
+.seller-order-table th:nth-child(6),
+.seller-order-table td:nth-child(6),
+
+.seller-order-table th:nth-child(8),
+.seller-order-table td:nth-child(8),
+
+.seller-order-table th:nth-child(9),
+.seller-order-table td:nth-child(9){
+  text-align:center;
+}
+
+/* LEBAR KOLOM */
+.seller-order-table th:nth-child(1){ width:10%; }
+.seller-order-table th:nth-child(2){ width:10%; }
+.seller-order-table th:nth-child(3){ width:8%; }
+.seller-order-table th:nth-child(4){ width:14%; }
+.seller-order-table th:nth-child(5){ width:12%; }
+.seller-order-table th:nth-child(6){ width:12%; }
+.seller-order-table th:nth-child(7){ width:10%; }
+
+/* STATUS DIPERLEBAR */
+.seller-order-table th:nth-child(8){
+  width:12%;
+}
+
+/* AKSI DIPERLEBAR */
+.seller-order-table th:nth-child(9){
+  width:12%;
+}
+
+/* TAMBAH JARAK STATUS */
+.seller-order-table td:nth-child(8){
+  padding-right:24px;
+}
+
+/* TAMBAH JARAK AKSI */
+.seller-order-table td:nth-child(9){
+  padding-left:24px;
+}
+
+.order-price{
+  color:#8a4306;
+  font-weight:800;
+  font-size:18px;
+
+  display:block;
+  width:100%;
+
+  text-align:center;
+  white-space:nowrap;
+}
+
+/* HEADER TOTAL SAJA */
+.seller-order-table th:nth-child(4){
+  text-align:center;
+}
+
+/* ISI TOTAL TETAP RATA KIRI */
+.seller-order-table td:nth-child(4){
+  text-align:left;
+}
+
+.order-status{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-width:150px;
+  height:46px;
+
+  border-radius:999px;
+
+  font-weight:800;
+  font-size:15px;
+}
+
+.order-status.pending {
+  background: #fff4df;
+  color: #b45309;
+}
+
+.order-status.process {
+  background: #eef5ff;
+  color: #2563eb;
+}
+
+.order-status.done {
+  background: #eafff1;
+  color: #0a8f3c;
+}
+
+.order-status.paid{
+  background:#eafff1;
+  color:#0a8f3c;
+}
+
+.order-detail-btn{
+  width:120px;
+  height:56px;
+
+  border:none;
+  border-radius:18px;
+
+  background:#0f0909;
+  color:white;
+
+  font-size:16px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.order-detail-btn:hover{
+  background:#231717;
+  transform:translateY(-2px);
+}
+
+
+.payment-method-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-width:100px;
+  height:46px;
+
+  border-radius:999px;
+
+  background:#f3ece7;
+  color:#7f461b;
+
+  font-weight:800;
+  font-size:15px;
+}
+
+.proof-link{
+  display:inline-block;
+
+  padding:8px 12px;
+
+  background:#d9fbe8;
+  color:#0a8f3c;
+
+  border-radius:10px;
+
+  font-weight:800;
+
+  text-decoration:none;
+
+  font-size:13px;
+}
+
+.proof-link:hover{
+  background:#0a8f3c;
+  color:white;
+}
+
+.proof-empty{
+  color:#c51f1f;
+  font-weight:800;
+  font-size:13px;
+}
+
+.proof-cod{
+  color:#7f6d61;
+  font-weight:800;
+  font-size:13px;
+}
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,.65);
+
+  backdrop-filter:blur(6px);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:9999;
+}
+
+.order-modal{
+  position:relative;
+
+  width:1100px;
+  max-width:95%;
+
+  max-height:90vh;
+  overflow-y:auto;
+
+  background:white;
+
+  border-radius:24px;
+
+  padding:35px;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.25);
+}
+.order-modal h2{
+  margin-top:0;
+  margin-bottom:24px;
+
+  color:#171312;
+
+  font-size:32px;
+}
+
+.order-detail-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-bottom:10px;
+}
+
+.detail-box{
+  background:#faf8f6;
+  border:1px solid #ece3dc;
+
+  border-radius:16px;
+  transition:.25s;
+  padding:18px 20px;
+
+  display:flex;
+  flex-direction:column;
+
+  min-height:110px;
+
+  justify-content:center;
+}
+
+.detail-box .order-status{
+  width:fit-content;
+}
+
+.detail-box span:first-child{
+  color:#8a7a70;
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.detail-box strong{
+  color:#171312;
+  font-size:18px;
+  font-weight:700;
+}
+
+.detail-box:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 8px 20px rgba(127,70,27,.08);
+}
+
+.modal-action{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin-top:25px;
+}
+
+.finish-order-btn,
+.close-modal-btn{
+  width:100%;
+  min-height:70px;
+  height:60px;
+
+  padding:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:none;
+  border-radius:18px;
+
+  font-size:20px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  box-sizing:border-box;
+}
+
+/* TOMBOL SELESAI */
+.finish-order-btn{
+  background:linear-gradient(
+    135deg,
+    #16a34a,
+    #22c55e
+  );
+
+  color:white;
+}
+
+.finish-order-btn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 12px 24px rgba(34,197,94,.25);
+}
+
+/* TOMBOL TUTUP */
+.close-modal-btn{
+  background:linear-gradient(
+    135deg,
+    #7f461b,
+    #9a5a28
+  );
+
+  color:white;
+}
+
+.close-modal-btn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 12px 24px rgba(127,70,27,.25);
+}
+
+.modal-action{
+  display:flex;
+  gap:20px;
+  margin-top:25px;
+}
+
+.finish-order-btn,
+.close-modal-btn{
+  flex:1;
+}
+
+/* jika tombol selesai tidak ada */
+.modal-action:has(.close-modal-btn:only-child) .close-modal-btn{
+  width:100%;
+}
+
+@media (max-width:900px){
+
+  .order-detail-grid{
+    grid-template-columns:1fr;
+  }
+
+  .order-modal{
+    padding:24px;
+  }
+
+  .seller-order-main {
+    padding: 35px 20px;
+  }
+
+  .seller-order-stats {
+    grid-template-columns: 1fr;
+  }
+
+}

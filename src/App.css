@@ -1,0 +1,537 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* =========================
+   GLOBAL COLOR
+========================= */
+
+:root{
+  --primary:#7f461b;
+  --primary-light:#9a5a28;
+  --success:#16a34a;
+  --danger:#dc2626;
+
+  --text:#2e2e2e;
+  --muted:#777;
+
+  --border:#ececec;
+
+  --white:#fff;
+  --bg:#fafafa;
+}
+
+/* =========================
+   GLOBAL FONT
+========================= */
+
+html,
+body,
+#root{
+  min-height:100%;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* paksa seluruh komponen */
+button,
+input,
+textarea,
+select,
+a,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label{
+  font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   GLOBAL LOGO SIPERA
+========================= */
+
+.app-logo,
+.sipera-logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.app-logo-image,
+.sipera-logo img{
+  width:45px;
+  height:45px;
+  object-fit:contain;
+  flex-shrink:0;
+
+  transition:.3s;
+}
+
+.app-logo h2,
+.sipera-logo h2{
+  margin:0;
+  font-size:26px;
+  font-weight:800;
+}
+.app-logo h2 span,
+.sipera-logo h2 span{
+  color:#7f461b;
+}
+
+.app-logo-image:hover,
+.sipera-logo img:hover{
+  transform:scale(1.05);
+}
+
+/* =========================
+   GLOBAL NAVBAR
+========================= */
+
+.app-navbar{
+  height:86px;
+
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(10px);
+
+  border-bottom:1px solid #ececec;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 42px;
+
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  box-shadow:
+    0 4px 20px rgba(0,0,0,.05);
+}
+
+/* =========================
+   GLOBAL NAVIGATION
+========================= */
+
+.app-nav-links{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.app-nav-links a{
+  text-decoration:none;
+
+  color:#4a403a;
+
+  font-size:16px;
+  font-weight:700;
+
+  padding:12px 22px;
+
+  border-radius:999px;
+
+  transition:.3s;
+}
+
+.app-nav-links a:hover{
+  background:#f4ece7;
+  color:#7f461b;
+}
+
+.app-nav-links a.active{
+  background:linear-gradient(
+    135deg,
+    #7f461b,
+    #9a5a28
+  );
+
+  color:white;
+
+  box-shadow:
+    0 8px 20px rgba(
+      127,
+      70,
+      27,
+      .25
+    );
+}
+
+/* =========================
+   GLOBAL USER PROFILE
+========================= */
+
+.app-user{
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+  border-left:1px solid #e8e2dd;
+
+  padding-left:28px;
+}
+
+.app-user div{
+  display:flex;
+  flex-direction:column;
+
+  text-align:right;
+}
+
+.app-user strong{
+  font-size:16px;
+  font-weight:700;
+}
+
+.app-user span{
+  font-size:13px;
+  color:#8a7b71;
+}
+
+/* =========================
+   GLOBAL LOGOUT
+========================= */
+
+.app-logout{
+  width:54px;
+  height:54px;
+
+  border:none;
+  border-radius:16px;
+
+  background:#f7efe9;
+  color:#7f461b;
+
+  cursor:pointer;
+
+  font-size:28px;
+  font-weight:700;
+
+  transition:.25s;
+}
+
+.app-logout:hover{
+  background:#7f461b;
+  color:white;
+}
+
+/* =========================
+   GLOBAL RESPONSIVE NAVBAR
+========================= */
+
+@media (max-width:900px){
+
+  .app-navbar{
+    height:auto;
+    padding:20px;
+
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .app-nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .app-user{
+    border-left:none;
+    padding-left:0;
+  }
+}
+
+.app-page-header{
+  width:100%;
+
+  background:white;
+  border:1px solid #ebe5df;
+  border-radius:24px;
+
+  padding:24px 24px;
+
+  min-height:auto;
+
+  margin-bottom:24px;
+
+  text-align:center;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  box-shadow:0 4px 12px rgba(0,0,0,.04);
+}
+
+.app-page-label{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:8px 18px;
+
+  background:#f3ece7;
+  color:#8b4e1c;
+
+  border-radius:999px;
+
+  font-size:13px;
+  font-weight:700;
+
+  margin-bottom:14px;
+
+  min-height:auto;
+}
+
+.app-page-header h1{
+  margin:0;
+
+  font-size:42px;
+  font-weight:800;
+
+  color:#171312;
+
+  line-height:1.15;
+}
+
+.app-page-header p{
+  margin-top:10px;
+
+  max-width:1000px;
+
+  font-size:20px;
+  line-height:1.8;
+
+  color:#7f6d61;
+}
+
+.app-main{
+  width:100%;
+  padding:24px;
+  min-height:calc(100vh - 86px);
+}
+
+/* =========================
+   GLOBAL FOOTER
+========================= */
+.app-footer{
+  width:100%;
+  margin-top:40px;
+  background:#171312;
+  color:white;
+
+  padding:20px 80px 15px;
+
+  display:grid;
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr;
+
+  gap:30px;
+}
+
+.footer-banner{
+  width:100%;
+  height:100px;
+  background:#171312;
+  overflow: hidden;
+}
+
+.footer-banner img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position: center 50%;
+}
+
+html,
+body,
+#root{
+  min-height:100%;
+}
+
+body{
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+.app-footer h3{
+  margin-bottom:4px;
+  font-size:18px;
+}
+
+.app-footer p,
+.app-footer a{
+  color:#d0c9c4;
+  text-decoration:none;
+  line-height:1.8;
+}
+
+.app-footer a:hover{
+  color:white;
+}
+
+.footer-brand p{
+  margin-top:10px;
+  max-width:420px;
+}
+
+.app-footer .sipera-logo h2{
+  color:white;
+}
+
+.app-footer .sipera-logo h2 span{
+  color:var(--primary);
+}
+
+/* =========================
+   FOOTER NAVIGATION
+========================= */
+
+.footer-nav,
+.footer-contact{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.footer-contact h3{
+  margin-bottom:20px;
+}
+
+.footer-contact ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.footer-contact li{
+  width:100%;
+}
+
+.footer-contact a{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.footer-nav ul,
+.footer-contact ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.footer-nav li,
+.footer-contact li{
+  line-height:1;
+}
+
+.footer-brand .sipera-logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:12px;
+}
+
+.footer-nav a,
+.footer-contact a{
+  font-size:15px;
+  padding:2px 0;
+  color:#cfc7c2;
+  text-decoration:none;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  transition:.25s;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover{
+  color:white;
+}
+
+.footer-contact i{
+  color:#7f461b;
+  font-size:18px;
+  width:20px;
+}
+
+/* =========================
+   FOOTER BANNER
+========================= */
+
+.app-footer-banner{
+  width:100%;
+  height:100px; /* sebelumnya 120px */
+  overflow:hidden;
+  line-height:0;
+  margin-top:-1px;
+  background:#171312;
+}
+
+.app-footer-banner img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  /* naikkan posisi gambar */
+object-position:center 60%;
+
+  display:block;
+}
+
+@media (max-width:900px){
+
+  .app-page-header{
+    padding:40px 20px;
+  }
+
+  .app-page-label{
+    padding:10px 20px;
+    font-size:14px;
+  }
+
+  .app-page-header h1{
+    font-size:34px;
+  }
+
+  .app-page-header p{
+    font-size:16px;
+  }
+
+  .app-footer{
+    grid-template-columns:1fr;
+    padding:40px 25px;
+    gap:30px;
+  }
+
+}
+
