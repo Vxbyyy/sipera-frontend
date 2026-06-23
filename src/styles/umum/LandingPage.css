@@ -261,21 +261,154 @@ html {
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero-section,
-  .info-section {
-    grid-template-columns: 1fr;
+  .info-section{
+    grid-template-columns:1fr;
+    gap:30px;
   }
 
-  .hero-left h1 {
-    font-size: 42px;
+  .hero-section{
+    padding:40px 20px;
+    text-align:center;
+  }
+
+  .hero-left h1{
+    font-size:38px;
+    line-height:1.2;
+  }
+
+  .hero-left p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+    flex-wrap:wrap;
   }
 
   .animal-grid,
   .stats-section {
     grid-template-columns: repeat(2, 1fr);
   }
+  .stats-section{
+    grid-template-columns:repeat(4,1fr);
+    padding:25px 10px;
+    gap:8px;
+  }
+  .stat-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .stat-box h2{
+     font-size:24px;
+    margin-bottom:4px;
+    line-height:1;
+  }
+
+    .stat-box p{
+    font-size:11px;
+    line-height:1.3;
+    text-align:center;
+  }
 
   .navbar {
     flex-direction: column;
     gap: 20px;
+  }
+}
+
+@media (max-width:900px){
+
+  .animal-section{
+    padding:40px 15px;
+  }
+
+  .animal-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .animal-card{
+    overflow:hidden;
+    border-radius:12px;
+  }
+
+  .animal-card img{
+    height:100px;
+  }
+
+  .animal-content{
+    padding:8px;
+  }
+
+  .animal-content h3{
+    font-size:14px;
+    min-height:34px;
+    margin-bottom:4px;
+    line-height:1.3;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .animal-price{
+    font-size:13px;
+    margin-bottom:6px;
+  }
+
+  .order-button{
+    width:100%;
+    padding:7px;
+    font-size:12px;
+    border-radius:10px;
+  }
+}
+
+@media (max-width:900px){
+
+  .info-section{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+    padding:20px 12px 40px;
+  }
+
+  .info-card{
+    padding:14px;
+  border-radius:14px;
+
+    min-height:auto;
+  }
+
+  .info-icon{
+    width:36px;
+    height:36px;
+    font-size:16px;
+    margin-bottom:10px;
+
+    border-radius:12px;
+  }
+
+  .info-card h3{
+    font-size:16px;
+    margin-bottom:12px;
+  }
+
+  .info-card p{
+    font-size:12px;
+    line-height:1.5;
+  }
+
+  .order-flow li{
+    padding-left:20px;
+    margin-bottom:10px;
+
+    font-size:12px;
+    line-height:1.5;
   }
 }

@@ -82,7 +82,7 @@
   display:grid;
 
   grid-template-columns:
-  repeat(auto-fill,minmax(320px,1fr));
+  repeat(auto-fit,minmax(280px,1fr));
 
   gap:24px;
 
@@ -198,6 +198,28 @@
 
   margin-top:8px;
   margin-bottom:16px;
+}
+
+@media (max-width:900px){
+
+  .history-price{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:4px;
+
+    padding:0 10px;
+  }
+
+  .history-price strong{
+    font-size:13px;
+  }
+
+  .history-price span{
+    font-size:12px;
+  }
+
 }
 
 .history-price strong{
@@ -536,4 +558,148 @@
 .close-btn:hover{
   background:#7f461b;
   color:white;
+}
+
+/* =========================
+   MOBILE RIWAYAT TERNAK
+========================= */
+
+@media (max-width:900px){
+
+  .riwayat-container{
+    padding:12px;
+  }
+
+  .history-header{
+    padding:18px;
+  }
+
+  .history-header h2{
+    font-size:18px;
+  }
+
+  .history-header p{
+    font-size:12px;
+  }
+
+  .history-list{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    padding:8px;
+  }
+
+  .history-item{
+    border-radius:12px;
+  }
+
+  .history-img{
+    width:100%;
+    height:90px;
+    object-fit:cover;
+  }
+
+  .history-number{
+    width:24px;
+    height:24px;
+    font-size:11px;
+    top:6px;
+    left:6px;
+  }
+
+  .history-info{
+    padding:8px;
+  }
+
+  .history-info h3{
+    font-size:14px;
+    margin-bottom:2px;
+    line-height:1.2;
+  }
+
+  .history-info p{
+    font-size:11px;
+    line-height:1.3;
+
+    min-height:auto;
+    margin-bottom:6px;
+
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical;
+  }
+
+  .history-price{
+    padding:0 8px;
+
+    margin-top:0;
+    margin-bottom:6px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .history-price strong{
+    font-size:12px;
+    line-height:1.2;
+  }
+
+  .history-price span{
+    font-size:11px;
+  }
+
+  .badge{
+    margin:0 8px 6px;
+    padding:4px 8px;
+    font-size:10px;
+  }
+
+  .detail-btn{
+    width:calc(100% - 16px);
+    margin:0 8px 8px;
+
+    height:32px;
+    font-size:11px;
+    border-radius:8px;
+  }
+}
+
+@media (max-width:900px){
+
+  .history-list{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    padding:10px;
+  }
+
+  .history-item{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+
+.history-img{
+  aspect-ratio:1/1;
+  height:auto;
+}
+
+  .history-info{
+    padding:10px;
+  }
+
+  .history-info h3{
+    font-size:15px;
+    margin-bottom:4px;
+  }
+
+  .history-info p{
+    font-size:12px;
+    line-height:1.4;
+
+    min-height:34px;
+
+    overflow:hidden;
+  }
+
 }

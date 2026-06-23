@@ -71,6 +71,9 @@
   font-weight: 700;
 
   transition: .3s;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
 
   box-shadow:
     0 10px 25px rgba(
@@ -91,6 +94,13 @@
       27,
       0.35
     );
+}
+
+@media (max-width:768px){
+
+  .add-button{
+    width:100%;
+  }
 }
 
 /* =========================
@@ -348,15 +358,39 @@
     padding: 30px 18px;
   }
 
-  .seller-table-card {
-    overflow-x: auto;
+  .seller-table-card{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
   }
 
-  .seller-table-card table {
-    min-width: 950px;
+  .seller-table-card table{
+    min-width:700px;
   }
 
   .seller-footer {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:768px){
+
+  .seller-table-card th,
+  .seller-table-card td{
+    padding:12px;
+    font-size:14px;
+  }
+
+  .ternak-photo{
+    width:60px;
+    height:60px;
+  }
+
+  .price{
+    font-size:16px;
+  }
+
+  .status-badge{
+    padding:6px 10px;
+    font-size:12px;
   }
 }

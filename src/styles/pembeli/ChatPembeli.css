@@ -357,3 +357,142 @@
     background: #f3ece7;
   }
 }
+
+/* =========================
+   CHAT MOBILE FIX
+========================= */
+@media (max-width:900px){
+
+  .buyer-chat-layout{
+    grid-template-columns:1fr;
+    gap:12px;
+    margin-top:15px;
+  }
+
+  .buyer-chat-list-card{
+    height:auto;
+    padding:14px;
+    border-radius:16px;
+  }
+
+  .buyer-chat-room-card{
+    height:75vh;
+    border-radius:16px;
+    height:calc(100vh - 180px);
+  }
+
+  .buyer-chat-list-card h2{
+    font-size:18px;
+    margin-bottom:12px;
+  }
+
+  .buyer-chat-list-item{
+    padding:10px;
+    gap:10px;
+
+    grid-template-columns:
+      40px
+      1fr
+      auto;
+  }
+
+  .buyer-chat-avatar{
+    width:40px;
+    height:40px;
+    font-size:14px;
+  }
+
+  .buyer-chat-avatar.large{
+    width:44px;
+    height:44px;
+    font-size:16px;
+  }
+
+  .buyer-chat-list-item h4{
+    font-size:14px;
+  }
+
+  .buyer-chat-list-item p{
+    font-size:12px;
+  }
+
+  .buyer-chat-list-item span{
+    font-size:11px;
+  }
+
+  .buyer-chat-room-header{
+    padding:12px 14px;
+    gap:10px;
+  }
+
+  .buyer-chat-room-header h2{
+    font-size:16px;
+  }
+
+  .buyer-chat-room-header p{
+    font-size:12px;
+  }
+
+  .buyer-chat-messages{
+    padding:14px;
+  }
+
+  .buyer-message{
+    margin-bottom:10px;
+  }
+
+   .buyer-chat-messages{
+    background:#f5f5f5;
+  }
+
+
+  .buyer-message p{
+    max-width:90%;
+    padding:10px 12px;
+    font-size:13px;
+    line-height:1.5;
+    border-radius:16px 16px 4px 16px;
+  }
+
+  .buyer-chat-input{
+    padding:10px;
+    gap:8px;
+  }
+
+  .buyer-chat-input input{
+    height:42px;
+    padding:0 12px;
+    font-size:14px;
+  }
+
+    .buyer-message.seller p{
+    border-radius:16px 16px 16px 4px;
+  }
+
+  .buyer-chat-input button{
+    width:42px;
+    height:42px;
+    border-radius:10px;
+    font-size:14px;
+  }
+
+  .buyer-chat-empty-room{
+    min-height:200px;
+    font-size:14px;
+    padding:20px;
+  }
+
+  .start-chat-box{
+    padding:10px;
+  }
+
+  .start-chat-box input{
+    height:42px;
+    font-size:13px;
+  }
+
+  .start-chat-box button{
+    height:42px;
+    font-size:13px;
+  }
+}

@@ -3,7 +3,7 @@
 .lapor-page{
   min-height:100vh;
   background:#fafafa;
-  padding:10px 30px 0;
+  padding:32px;
   box-sizing:border-box;
 }
 
@@ -375,6 +375,26 @@
 
   .laporan-item {
     grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .lapor-page{
+    padding:0;
+  }
+
+  .lapor-card{
+    padding:20px;
+  }
+
+  .lapor-header-card h1{
+    font-size:32px;
+  }
+
+  .riwayat-laporan h2{
+    font-size:28px;
   }
 
 }

@@ -237,21 +237,61 @@ label{
 @media (max-width:900px){
 
   .app-navbar{
-    height:auto;
-    padding:20px;
+    height:70px;
+    padding:0 10px;
 
-    flex-direction:column;
-    gap:16px;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .app-logo-image{
+    width:32px;
+    height:32px;
+  }
+
+  .app-logo h2{
+    font-size:18px;
   }
 
   .app-nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
+    display:flex;
+    gap:4px;
+
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+
+  .app-nav-links::-webkit-scrollbar{
+    display:none;
+  }
+
+  .app-nav-links a{
+    flex-shrink:0;
+
+    padding:8px 12px;
+    font-size:12px;
   }
 
   .app-user{
+    gap:8px;
+
     border-left:none;
     padding-left:0;
+  }
+
+  .app-user strong{
+    font-size:12px;
+  }
+
+  .app-user span{
+    font-size:10px;
+  }
+
+  .app-logout{
+    width:40px;
+    height:40px;
+    font-size:18px;
   }
 }
 
@@ -322,6 +362,8 @@ label{
 
 .app-main{
   width:100%;
+  max-width:1400px;
+  margin:auto;
   padding:24px;
   min-height:calc(100vh - 86px);
 }
@@ -511,27 +553,84 @@ object-position:center 60%;
 @media (max-width:900px){
 
   .app-page-header{
-    padding:40px 20px;
+    padding:25px 20px;
   }
 
   .app-page-label{
-    padding:10px 20px;
-    font-size:14px;
+    font-size:12px;
   }
 
   .app-page-header h1{
-    font-size:34px;
+    font-size:28px;
   }
 
   .app-page-header p{
-    font-size:16px;
+    font-size:15px;
+    line-height:1.6;
   }
 
   .app-footer{
-    grid-template-columns:1fr;
-    padding:40px 25px;
-    gap:30px;
+    display:grid;
+
+    grid-template-columns:
+      1.5fr
+      1fr
+      1fr;
+
+    gap:15px;
+
+    padding:20px 12px;
+
+    align-items:start;
   }
 
-}
+    .footer-brand .sipera-logo{
+    gap:8px;
+    margin-bottom:8px;
+  }
 
+  .footer-brand .sipera-logo img{
+    width:28px;
+    height:28px;
+  }
+
+  .footer-brand .sipera-logo h2{
+    font-size:18px;
+  }
+
+  .footer-brand p{
+    font-size:11px;
+    line-height:1.6;
+    margin-top:6px;
+  }
+
+    .app-footer h3{
+    font-size:14px;
+    margin-bottom:10px;
+  }
+
+  .footer-nav,
+  .footer-contact{
+    min-width:auto;
+  }
+
+   .footer-nav a,
+  .footer-contact a{
+    font-size:11px;
+    gap:5px;
+    line-height:1.4;
+  }
+
+    .footer-contact i{
+    font-size:12px;
+    width:12px;
+  }
+
+  .footer-contact ul{
+    gap:8px;
+  }
+
+  .app-footer-banner{
+    height:55px;
+  }
+}

@@ -181,13 +181,6 @@
   grid-column: span 2;
 }
 
-@media (max-width: 900px) {
-  .profile-group.full {
-    grid-column: span 1;
-  }
-}
-
-
 .profile-cancel-btn{
   margin-left:12px;
   background:#999;
@@ -364,4 +357,30 @@
     align-items:flex-start;
     gap:15px;
   }
+}
+
+@media (max-width:768px){
+
+  .profile-form-card{
+    padding:20px;
+  }
+
+  .profile-header-user{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .profile-user-info{
+    text-align:center;
+  }
+
+  .profile-action-buttons{
+    flex-direction:column;
+  }
+
+  .profile-save-btn,
+  .profile-cancel-btn{
+    width:100%;
+  }
+
 }

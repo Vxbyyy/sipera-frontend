@@ -25,8 +25,7 @@
   display:grid;
   grid-template-columns:320px 1fr;
   gap:24px;
-
-  height:700px;
+  min-height:650px;
 }
 
 .chat-list-card,
@@ -142,7 +141,6 @@
 .chat-room-card{
   display:flex;
   flex-direction:column;
-  height:700px;
   overflow:hidden;
 }
 
@@ -191,12 +189,6 @@
 
   align-items:stretch;
 }
-
-.chat-list-card,
-.chat-room-card{
-  height:650px;
-}
-
 .chat-empty-room{
   flex:1;
 
@@ -347,21 +339,27 @@
   transition:.25s;
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px){
 
-  .seller-chat-main {
-    padding: 35px 20px;
+  .seller-chat-main{
+    padding:20px;
   }
 
-  .chat-layout {
-    grid-template-columns: 1fr;
+  .chat-layout{
+    grid-template-columns:1fr;
   }
 
-  .seller-chat-header h1 {
-    font-size: 34px;
+  .chat-list-card{
+    max-height:350px;
+    overflow-y:auto;
   }
 
-  .message p {
-    max-width: 85%;
+  .chat-room-card{
+    min-height:500px;
   }
+
+  .message p{
+    max-width:90%;
+  }
+
 }
