@@ -367,7 +367,6 @@
   margin-bottom:20px;
 }
 
-
 .modal-overlay{
   position:fixed;
   inset:0;
@@ -379,6 +378,8 @@
 
   padding:24px;
   z-index:9999;
+
+  overflow-y:auto;
 }
 
 .detail-card{
@@ -397,7 +398,7 @@
 
 .detail-img,
 .detail-img-placeholder{
-  flex:0 0 65%;
+  flex:0 0 55%;
   height:100%;
 }
 
@@ -448,7 +449,8 @@
 
 .detail-info-grid{
   display:grid;
-  gap:10px;
+  gap:8px;
+    padding-bottom:20px;
 }
 
 .detail-info-grid div{
@@ -458,7 +460,7 @@
 
   border-radius:14px;
 
-  padding:16px;
+  padding:12px;
 }
 
 .detail-info-grid span{
@@ -473,7 +475,7 @@
 }
 
 .detail-info-grid strong{
-  font-size:18px;
+  font-size:15px;
   color:#2e2e2e;
 }
 
@@ -502,18 +504,33 @@
 
   .detail-card{
     flex-direction:column;
-    height:95vh;
+
+    width:95%;
+    max-width:420px;
+
+    height:auto;
+    max-height:90vh;
+
+    overflow:hidden;
   }
 
   .detail-img,
   .detail-img-placeholder{
     width:100%;
-    height:280px;
+    height:180px;
+    flex:none;
   }
 
   .detail-content{
     width:100%;
+    padding:14px;
+
+    overflow-y:auto;
+    max-height:calc(90vh - 180px);
+
+    padding-bottom:40px; /* tambahan */
   }
+
 }
 
 .detail-info-grid div{

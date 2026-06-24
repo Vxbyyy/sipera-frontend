@@ -89,7 +89,7 @@
 .form-container form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .form-layout {
@@ -102,25 +102,26 @@
 .form-left {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  gap: 12px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .form-container label {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: #222;
+  margin-bottom:4px;
 }
 
 .form-container input,
@@ -128,12 +129,11 @@
 .form-container textarea {
   width: 100%;
 
-  padding: 16px;
-
   border: 1px solid #ddd;
   border-radius: 14px;
 
-  font-size: 16px;
+  padding:12px 14px;
+  font-size:14px;
 
   box-sizing: border-box;
 }
@@ -270,13 +270,29 @@
   }
 
   .form-header{
-    flex-direction:column;
-    align-items:flex-start;
+  display:flex;
+  align-items:center;
+  gap:20px;
   }
-
+.form-header-text{
+  flex:1;
+}
   .preview-box,
   .preview-placeholder{
     height:220px;
   }
+
+.back-btn{
+width:48px !important;
+height:48px !important;
+
+min-width:48px;
+max-width:48px;
+
+flex:none;
+
+align-self:flex-start;
+
+}
 
 }

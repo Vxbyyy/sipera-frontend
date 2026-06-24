@@ -4,19 +4,6 @@
   color: #2e2e2e;
 }
 
-.order-navbar {
-  height: 86px;
-  background: white;
-  border-bottom: 1px solid #e8e8e8;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 42px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
 .order-logo h2 {
   margin: 0;
   font-size: 26px;
@@ -27,53 +14,11 @@
   color: #7f461b;
 }
 
-.order-nav-links {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
-.order-nav-links a {
-  text-decoration: none;
-  color: #3d332d;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 12px 22px;
-  border-radius: 999px;
-}
 
 .order-nav-links a:hover,
 .order-nav-links a.active {
   background: #7f461b;
   color: white;
-}
-
-.order-user {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  border-left: 1px solid #e4ded8;
-  padding-left: 28px;
-}
-
-.order-user div {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-}
-
-.order-user span {
-  color: #7f6d61;
-  font-size: 14px;
-}
-
-.order-user button {
-  border: none;
-  background: transparent;
-  color: #7f461b;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 .order-main {
@@ -559,22 +504,6 @@
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .order-navbar {
-    height: auto;
-    padding: 20px;
-    flex-direction: column;
-    gap: 18px;
-  }
-
-  .order-nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .order-user {
-    border-left: none;
-    padding-left: 0;
-  }
 
   .order-main {
     padding: 35px 20px;
@@ -637,4 +566,45 @@
 .proof-title {
   margin-top: 22px;
 }
+}
+
+@media (max-width:768px){
+
+  /* card utama */
+  .order-detail-card,
+  .detail-card,
+  .order-info-card{
+    padding:16px !important;
+    border-radius:16px;
+  }
+
+  /* semua kotak detail */
+  .order-detail-card .info-box,
+  .order-detail-card .detail-box,
+  .detail-card > div{
+    min-height:auto !important;
+    padding:12px !important;
+    margin-bottom:10px !important;
+    border-radius:12px;
+  }
+
+  /* label */
+  .detail-label{
+    font-size:11px !important;
+    margin-bottom:4px !important;
+  }
+
+  /* value */
+  .detail-value{
+    font-size:14px !important;
+    font-weight:700;
+  }
+
+  /* badge status */
+  .status-badge{
+    height:36px !important;
+    padding:0 16px !important;
+    font-size:13px !important;
+  }
+
 }

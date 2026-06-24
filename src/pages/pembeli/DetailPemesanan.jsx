@@ -177,7 +177,7 @@ function DetailPemesanan() {
 
   return (
     <div className="order-detail-page">
-      <nav className="order-navbar">
+      <nav className="app-navbar">
         <div className="app-logo">
         <img
           src={logoSipera}
@@ -190,7 +190,7 @@ function DetailPemesanan() {
         </h2>
       </div>
 
-        <div className="order-nav-links">
+        <div className="app-nav-links">
           <NavLink to="/pembeli" end>
             Beranda
           </NavLink>
@@ -200,15 +200,19 @@ function DetailPemesanan() {
           <NavLink to="/pembeli/profil">Profil</NavLink>
         </div>
 
-        <div className="order-user">
+        <div className="app-user">
           <div>
             <strong>{loggedInUser?.nama || "Pembeli"}</strong>
             <span>Buyer</span>
           </div>
 
-          <button type="button" onClick={handleLogout}>
-            ↪
-          </button>
+<button
+  type="button"
+  className="app-logout"
+  onClick={handleLogout}
+>
+  ↪
+</button>
         </div>
       </nav>
 

@@ -382,19 +382,68 @@
 @media (max-width:768px){
 
   .lapor-page{
-    padding:0;
+    padding:12px;
   }
 
   .lapor-card{
-    padding:20px;
+    padding:16px;
+    border-radius:16px;
   }
 
   .lapor-header-card h1{
-    font-size:32px;
+  font-size:28px;
+  line-height:1.2;
   }
+
+  .lapor-header-card p{
+  font-size:14px;
+  line-height:1.6;
+}
 
   .riwayat-laporan h2{
-    font-size:28px;
+    font-size:18px;
+    margin-bottom:12px;
   }
 
+    .laporan-item{
+    padding:14px;
+    border-radius:14px;
+  }
+
+    .laporan-item-header{
+    gap:8px;
+    margin-bottom:12px;
+  }
+
+  .kategori-badge,
+  .status-badge{
+    font-size:10px;
+    padding:6px 12px;
+  }
+
+  .info-box,
+  .user-reply-box{
+    min-height:auto;
+    padding:12px;
+    border-radius:12px;
+  }
+
+  .laporan-section h4,
+  .user-reply-section h4{
+    font-size:14px;
+    margin-bottom:6px;
+  }
+
+  .user-reply-section textarea{
+    min-height:90px;
+    padding:12px;
+    font-size:13px;
+  }
+
+  .btn-kirim,
+  .btn-reply-user{
+    height:44px;
+    font-size:13px;
+    border-radius:10px;
+  }
 }

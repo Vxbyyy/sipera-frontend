@@ -553,7 +553,8 @@ object-position:center 60%;
 @media (max-width:900px){
 
   .app-page-header{
-    padding:25px 20px;
+  padding:18px !important;
+  margin-bottom:12px !important;
   }
 
   .app-page-label{
@@ -561,11 +562,11 @@ object-position:center 60%;
   }
 
   .app-page-header h1{
-    font-size:28px;
+  font-size:28px !important;
   }
 
   .app-page-header p{
-    font-size:15px;
+  font-size:14px !important;
     line-height:1.6;
   }
 

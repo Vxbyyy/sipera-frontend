@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import api from "../../api/axiosConfig";
 import Footer from "../umum/Footer";
 import "../../styles/Admin/DashboardAdmin.css";
+import logoSipera from "../../assets/logo-sipera.jpeg";
 
 function DashboardAdmin() {
   const navigate = useNavigate();
@@ -149,12 +150,17 @@ function DashboardAdmin() {
     <div className="admin-page">
       {/* NAVBAR */}
       <header className="admin-navbar">
-        <div className="admin-logo">
-          <div className="admin-logo-box">S</div>
-          <h2>
-            SIPERA <span>TORAJA</span>
-          </h2>
-        </div>
+      <div className="admin-logo">
+        <img
+          src={logoSipera}
+          alt="SIPERA Toraja"
+          className="admin-logo-image"
+        />
+
+        <h2>
+          SIPERA <span>TORAJA</span>
+        </h2>
+      </div>
 
         <nav className="admin-nav">
           <div className="admin-profile">

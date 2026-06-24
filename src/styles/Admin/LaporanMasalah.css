@@ -78,7 +78,9 @@
   gap:12px;
   align-items:flex-start;
   min-height:95px;
-  padding:16px 18px;
+  padding:15px;
+  border-radius:16px;
+  margin-bottom:12px;
 
   border-bottom:1px solid #f1f1f1;
 
@@ -86,6 +88,17 @@
 
   transition:.2s;
 }
+
+.laporan-item-header{
+  margin-bottom:10px;
+}
+
+.kategori-badge,
+.status-badge{
+  padding:6px 12px;
+  font-size:12px;
+}
+
 .user-info{
   display:flex;
   align-items:center;
@@ -214,13 +227,12 @@
 =========================== */
 .chat-area{
   flex:1;
-  padding:30px;
-
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-
+  padding:24px;
   background:#fafafa;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
 }
 
 
@@ -518,3 +530,71 @@ transform:translateY(-2px);
   font-size:18px;
   font-weight:600;
 }
+
+@media (max-width:768px){
+
+  .laporan-container{
+    padding:12px;
+  }
+
+  .laporan-header{
+    padding:20px;
+    margin-bottom:12px;
+  }
+
+  .laporan-stats{
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-bottom:12px;
+  }
+
+  .stat-card{
+    padding:12px;
+    border-radius:16px;
+  }
+
+  .stat-card h3{
+    font-size:20px;
+  }
+
+  .stat-card p{
+    font-size:12px;
+    margin-top:4px;
+  }
+
+  .laporan-chat-layout{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .laporan-sidebar{
+    max-height:280px;
+    overflow-y:auto;
+  }
+
+  .laporan-detail{
+    min-height:450px;
+  }
+
+  .laporan-item{
+    min-height:auto;
+    padding:10px;
+    gap:8px;
+  }
+
+  .laporan-item-info h4{
+    font-size:13px;
+  }
+
+  .laporan-item-info p{
+    font-size:11px;
+  }
+
+  .user-avatar{
+    width:32px;
+    height:32px;
+    font-size:12px;
+  }
+
+}
+
